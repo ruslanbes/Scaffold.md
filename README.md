@@ -1,23 +1,23 @@
-# md-harness
+# Scaffold.md
 
-Markdown-native agent harness for solo monorepos.
+Markdown-native process scaffold for solo monorepos.
 
 Documentation + engineering-process layouts for a single-repo single-developer project.
 
-Not a tool, not a skill, not a plugin. It's rather a skeleton for your repo that supports you if you are doing development with a coding agent. Instead of starting with an empty repo you start with md-harness.
+Not a tool, not a skill, not a plugin. It's rather a skeleton for your repo that supports you if you are doing development with a coding agent. Instead of starting with an empty repo you start with Scaffold.md.
 
 ## Install into an empty repo
 
 Launch a coding agent or IDE of your choice (Cursor, VScode, Claude, Gemini etc.) in an empty dir and prompt it: 
 
-> Install a simple md-harness from https://github.com/ruslanbes/md-harness
+> Install a simple Scaffold.md from https://github.com/ruslanbes/Scaffold.md
 
 Or do it by hand: 
 
 ```sh
-git clone https://github.com/ruslanbes/md-harness.git
-cp -R md-harness/simple/. /path/to/new-repo/
-rm -rf md-harness
+git clone https://github.com/ruslanbes/Scaffold.md.git
+cp -R Scaffold.md/simple/. /path/to/new-repo/
+rm -rf Scaffold.md
 cd /path/to/new-repo/
 # launch your favorite editor with a coding agent: "cursor .", "code .", "idea ." etc.
 ```
@@ -25,7 +25,7 @@ cd /path/to/new-repo/
 ## First agent prompts
 
 ```
-This project will use md-harness, learn how to track tasks, document decisions and release the project. 
+This project will use Scaffold.md, learn how to track tasks, document decisions and release the project. 
 ```
 
 ```

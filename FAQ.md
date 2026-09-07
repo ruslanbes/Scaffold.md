@@ -27,33 +27,33 @@ So, the main benefit of the markdown-based tracker is speed. The main sacrifice 
 These all live in the “help humans and coding agents run work from the repo” space. They are not the same kind of thing.
 
 
-|                      | **md-harness**                                                                 | **[Backlog.md](https://github.com/MrLesk/Backlog.md)**         | **[GitHub Spec Kit](https://github.com/github/spec-kit)**   | **[Beads](https://github.com/gastownhall/beads)**                 |
+|                      | **Scaffold.md**                                                                 | **[Backlog.md](https://github.com/MrLesk/Backlog.md)**         | **[GitHub Spec Kit](https://github.com/github/spec-kit)**   | **[Beads](https://github.com/gastownhall/beads)**                 |
 | -------------------- | ------------------------------------------------------------------------------ | -------------------------------------------------------------- | ----------------------------------------------------------- | ----------------------------------------------------------------- |
 | **What it is**       | File templates + process conventions you copy into a repo                      | Task manager product (CLI, board, optional MCP)                | Spec-driven workflow toolkit (CLI + agent slash commands)   | Agent-oriented issue tracker (`bd`) with a graph DB               |
 | **Storage**          | Plain markdown (and whatever else you put next to tasks)                       | Plain markdown tasks, usually edited via the tool              | Markdown specs / plans / task lists under a Spec Kit layout | Dolt-backed DB (not freeform markdown TODOs)                      |
 | **Runtime**          | None — editors and agents read files                                           | Install and run `backlog`                                      | Install `specify`; wire slash commands into an agent        | Install and run `bd`                                              |
 | **Main focus**       | Ongoing process: backlog, session status, ADRs, changelog, cleanup + release | Managing and visualizing tasks                                 | Building a feature: specify → plan → tasks → implement      | Long-horizon agent work: deps, ready queue, multi-agent claiming  |
 | **Docs / decisions** | First-class (`docs/adr`, promote on cleanup)                              | Secondary to task tracking                                     | Specs are the center for a change; not a full ADR/FAQ kit   | Project memory via the tool (`remember` / `prime`), not ADRs      |
-| **Best fit**         | Solo monorepo that wants a light, editable harness with no install             | Want a real markdown task board + CLI without inventing format | Want a structured SDD loop for larger features              | Want structured issues for agents more than human-edited markdown |
+| **Best fit**         | Solo monorepo that wants a light, editable scaffold with no install             | Want a real markdown task board + CLI without inventing format | Want a structured SDD loop for larger features              | Want structured issues for agents more than human-edited markdown |
 
 
-**TL;DR:** md-harness is a layout and cleanup/release habit, not a product. Backlog.md is the closest neighbor if you mainly want task files. Spec Kit is heavier and feature-shaped. Beads solves a similar problem with the opposite storage bet (DB/graph instead of freeform markdown).
+**TL;DR:** Scaffold.md is a layout and cleanup/release habit, not a product. Backlog.md is the closest neighbor if you mainly want task files. Spec Kit is heavier and feature-shaped. Beads solves a similar problem with the opposite storage bet (DB/graph instead of freeform markdown).
 
-## I already have a repository with a working project, can I install md-harness into it?
+## I already have a repository with a working project, can I install Scaffold.md into it?
 
 Yes, but you need to carefully adapt it without overwriting your files. Chances are, you already have top-level `CHANGELOG.md`, `AGENTS.md` and `docs` folder.
 
 Try using the following prompt with your agent:
 
 ```
-Install simple md-harness from https://github.com/ruslanbes/md-harness into this existing repo.
+Install simple Scaffold.md from https://github.com/ruslanbes/Scaffold.md into this existing repo.
 Merge, do not overwrite:
 - If a file already exists, leave its content. Append or add a pointer only when needed; say what you skipped.
 - AGENTS.md: if missing, copy it. If it exists, add a line to follow dev/README.md.
 - CHANGELOG.md: keep the existing file. If it has no [Unreleased] section, add one. Do not create a second changelog.
 - docs/: add adr/ next to whatever is already there. Do not replace docs/.
 - .cursor/rules/workflow.mdc: add alongside other rules; do not replace the rules folder.
-- dev/: if the folder does not exist, copy it. If it does, pick another name (ask me first) and update every harness path to match.
+- dev/: if the folder does not exist, copy it. If it does, pick another name (ask me first) and update every copied path to match.
 Then list what you added vs what you merged.
 ```
 

@@ -39,11 +39,11 @@ It's a ticket plus a short design note you lock before coding.
 Each task doc contains (usually):
 
 - Problem statement
-- List of decisions
+- Open questions
 - Implementation details
 - "Done when" checklist
 
-**List of decisions** is what you (a human) mainly want to read. You are the decision maker and only you are responsible for locking these decisions. Agent can suggest them, but your voice is final.
+**Open questions** is what you (a human) mainly want to read. You are the decision maker and only you are responsible for locking the answers. Agent can suggest them, but your voice is final.
 
 ### Where do they live?
 
@@ -53,7 +53,7 @@ Each task doc contains (usually):
 
 ## Implementing a task
 
-Read the task doc created by the agent, walk through the decisions and lock them (important!), check everything else in the task doc as much as you can. If you are satisfied, prompt the agent to implement the task and go drink a cup of whatever. Check the result. Rinse. Repeat.
+Read the task doc created by the agent, walk through the open questions and lock them (important!), check everything else in the task doc as much as you can. If you are satisfied, prompt the agent to implement the task and go drink a cup of whatever. Check the result. Rinse. Repeat.
 
 ## Layout (`simple/`)
 
@@ -143,7 +143,7 @@ flowchart TD
   Read --> Create["Create dev/tasks/kebab-id.md from TEMPLATE"]
   Create --> Index["Add ## kebab-id block to BACKLOG.md"]
   Index --> Focus[Update STATUS.md: active task / next action]
-  Create --> Lock[Lock decisions in the task doc before coding]
+  Create --> Lock[Lock open questions in the task doc before coding]
   Lock --> MaybeADR{Durable architecture choice?}
   MaybeADR -->|yes, early| ADR[Optional: write/update docs/adr/…]
   MaybeADR -->|no / later| Ready[Ready to implement]

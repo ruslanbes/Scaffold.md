@@ -14,7 +14,7 @@ How we run this project: ground rules, setup, cleanup, release, and current work
 
 - Track work here in `dev/` — flat backlog, status, optional task detail files under `tasks/`.
 - Work one task at a time.
-- Before implementing, check for missing decisions; lock them in the task doc (or an ADR) instead of guessing.
+- Before implementing, check for open questions; lock them in the task doc (or an ADR) instead of guessing.
 - Use [Mermaid](https://mermaid.js.org/) diagrams for architecture documentation.
 - When cleaning finished or cancelled work, follow [`CLEANUP.md`](CLEANUP.md). When cutting a version, follow [`RELEASE.md`](RELEASE.md).
 

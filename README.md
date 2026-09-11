@@ -10,7 +10,9 @@ Not a tool, not a skill, not a plugin. It's rather a skeleton for your repo that
 
 Launch a coding agent or IDE of your choice (Cursor, VScode, Claude, Gemini etc.) in an empty dir and prompt it: 
 
-> Install a simple Scaffold.md from https://github.com/ruslanbes/Scaffold.md
+```
+Install a simple Scaffold.md from https://github.com/ruslanbes/Scaffold.md
+```
 
 Or do it by hand: 
 
